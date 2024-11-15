@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/Quezmo.svg" alt="website logo">
+        </div>
+        <div class="header-icons">
+            <a href="index.html"><img src="assets/home.svg" alt="home icon" class="h-icon"></a>
+            <a href="admin.html"><img src="assets/plus.svg" alt="add quiz" class="h-icon"></a>
+        </div>
+    </header>
+
+        <div class="qs-container ">
+            <div class="qs-info">
+                <p id="score">345 point</p>
+                <p id="timer">14s</p>
+                <p id="question-number">15/20</p>
+            </div>
+            <!-- had div bach l gap tji fwhad lpattern ana baghih -->
+            <div class="diiv">  
+                <div class="qsbox">
+                    <div class="next-btn">
+                        <i class="fa-solid fa-circle-chevron-right" id="next-button"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt at facere, ab culpa labore sed vero possimus aspernatur asperiores tempora dolorem expedita? Voluptas, dolorem blanditiis iure quae sint accusantium reprehenderit.</p>
+                </div>
+                <div class="bar" id="progress-bar">
+                    <div class="fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <div class="qs-choices" id="mcq">
+                
+            </div>
+            <div class="qs-choices" id="boolean">
+                
+            </div>
+
+            <div class="qs-answer" id="textual">
+
+            </div>
+        
+        </div>
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <p id="final-score">Final Score: <span></span></p>
+            <p id="correct-answers">Number of correct answers: <span></span></p>
+            <p id="success-rate">Winning Rate: <span></span></p>
+            <p id="total-time">Total Time: <span></span></p>
+            <div class="result-buttons">
+                <button id="replay-button">Replay</button>
+                <a href="index.html"><button id="home-button">Homepage</button></a>
+            </div>
+        </div>
+
+        <div id="custom-alert" style="display: none;">
+            <div class="alert-content">
+                <p id="alert-message"></p>
+                <button id="alert-ok-button">OK</button>
+            </div>
+        </div>
+        
+        <script src="quizes.js">
+
+        </script>
+    
+</body>
+</html>
