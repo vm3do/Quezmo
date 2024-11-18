@@ -130,3 +130,16 @@ header {
     display: none;
     pointer-events: none;
 }
+
+
+/* table */
+
+.table-container {
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
