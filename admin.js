@@ -33,7 +33,6 @@ document.querySelector('#create-quiz .btn-submit').addEventListener('click', (e)
     alert('Quiz created successfully!');
     document.querySelector('#create-quiz .form').reset();
 
-    // update the dropdown
     populateQuizDropdown();
 });
 
@@ -64,6 +63,10 @@ function loadQuizzes() {
 }
 
 document.addEventListener('DOMContentLoaded', loadQuizzes);
+
+/////////////////////////////////////////
+////////////////////////////////////////
+
 
 
 
@@ -128,10 +131,58 @@ document.querySelector('#create-questions .btn-submit').addEventListener('click'
 
     localStorage.setItem('quizes', JSON.stringify(quizes));
 
-    /////////////////////////// hna ndir page b html better than alert 
     alert('Question added successfully!');
-    document.querySelector('#create-questions .form').reset(); // Reset the form
+    document.querySelector('#create-questions .form').reset();
 });
+
+
+function toggleQuestionInputs() {
+    const questionType = document.getElementById('question-type').value;
+    const mcqOptions = document.getElementById('mcq-options');
+    const booleanOptions = document.getElementById('boolean-options');
+    const textOptions = document.getElementById('text-options');
+
+    mcqOptions.classList.add('hidden');
+    booleanOptions.classList.add('hidden');
+    textOptions.classList.add('hidden');
+
+    if (questionType === 'mcq') {
+        mcqOptions.classList.remove('hidden');
+    } else if (questionType === 'boolean') {
+        booleanOptions.classList.remove('hidden');
+    } else if (questionType === 'text') {
+        textOptions.classList.remove('hidden');
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const questionTypeSelect = document.getElementById('question-type');
+
+    questionTypeSelect.addEventListener('change', (e) => {
+
+        questionTypeSelect.classList.remove('mcq', 'boolean', 'text');
+
+        switch (e.target.value) {
+            case 'mcq':
+                questionTypeSelect.classList.add('mcq');
+                break;
+            case 'boolean':
+                questionTypeSelect.classList.add('boolean');
+                break;
+            case 'text':
+                questionTypeSelect.classList.add('text');
+                break;
+        }
+    });
+});
+
+
+document.getElementById('question-type').addEventListener('change', toggleQuestionInputs);
+
+document.addEventListener('DOMContentLoaded', toggleQuestionInputs);
+
+
 
 
 function populateQuizDropdown() {
