@@ -112,7 +112,7 @@ header {
 
 #question-type.mcq {
     color: white;
-    background-color: #007bff;
+    background-color: #6f42c1;
 }
 
 #question-type.boolean {
@@ -123,5 +123,10 @@ header {
 
 #question-type.text {
     color: white;
-    background-color: #6f42c1;
+    background-color: #007bff;
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
 }

@@ -1,4 +1,4 @@
-const quizData = [
+const quizzData = [
     {
         "id": "quiz1",
         "title": "General Knowledge",
@@ -260,4 +260,4 @@ const quizData = [
     }
 ];
 
-localStorage.setItem("quizes", JSON.stringify(quizData));
+localStorage.setItem("quizes", JSON.stringify(quizzData));
